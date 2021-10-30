@@ -95,7 +95,8 @@ class BJ_Game:
         count = len(self.deck.cards)
         if count < 156:
             self.deck.clear()
-            self.deck.populate()
+            for i in range(4):
+                self.deck.populate()
             self.deck.shuffle()
         self.deck.deal(self.players + [self.dealer], per_hand = 2)
         self.dealer.flip_first_card()
